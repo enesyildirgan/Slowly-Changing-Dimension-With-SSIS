@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{C811F463-F31B-4FB6-814C-3DCE7C901185}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{328333B3-DDA0-43C6-896D-CA0895B59732}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -328,7 +328,7 @@ where [refTable].[ProductID] = ?</property>
                 <connection
                   refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -530,7 +530,7 @@ WHERE ProductID=?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -693,7 +693,7 @@ WHERE ProductID=?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -850,7 +850,7 @@ WHERE ProductID=?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 1 1.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -985,7 +985,7 @@ WHERE ProductID=?</property>
                 <connection
                   refId="Package\Data Flow Task\OLTP vw_Dim_Product.Connections[OleDbConnection]"
                   connectionManagerID="{693132E0-79DC-42BC-AD5D-141CC0B623A9}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1255,10 +1255,6 @@ WHERE ProductID=?</property>
           Id="Package\Data Flow Task\Lookup"
           TopLeft="220.545454545455,148.909090909091" />
         <NodeLayout
-          Size="190,42"
-          Id="Package\Data Flow Task\OLE DB Destination 1 1"
-          TopLeft="87.8383838383841,527.434343434344" />
-        <NodeLayout
           Size="130,42"
           Id="Package\Data Flow Task\Multicast 1"
           TopLeft="207.666666666667,260.555555555556" />
@@ -1266,6 +1262,10 @@ WHERE ProductID=?</property>
           Size="120,60"
           Id="Package\Data Flow Task\Multicast"
           TopLeft="476.888888888889,144.333333333333" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Data Flow Task\OLE DB Destination 1 1"
+          TopLeft="87.8383838383841,527.434343434344" />
         <NodeLayout
           Size="187,42"
           Id="Package\Data Flow Task\OLTP vw_Dim_Product"
@@ -1282,6 +1282,28 @@ WHERE ProductID=?</property>
           Size="154,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="349.777777777778,372.888888888889" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="426.833333333333,414.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.111111111111"
+              Start="0,0"
+              End="0,53.611111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.611111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Case 1]"
           TopLeft="182.669191919192,428">
@@ -1466,28 +1488,6 @@ WHERE ProductID=?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="426.833333333333,414.888888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.111111111111"
-              Start="0,0"
-              End="0,53.611111111111">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.611111111111" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1497,7 +1497,7 @@ WHERE ProductID=?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1507,7 +1507,7 @@ WHERE ProductID=?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

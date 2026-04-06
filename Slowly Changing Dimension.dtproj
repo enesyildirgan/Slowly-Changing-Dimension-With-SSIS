@@ -36,12 +36,12 @@
           <SSIS:Package SSIS:Name="Scd_Type6.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
-          <SSIS:ConnectionManager SSIS:Name="ENES-DESKTOP.AdventureWorks2022.conmgr" />
-          <SSIS:ConnectionManager SSIS:Name="ENES-DESKTOP.AdventureWorks2022_DWH.conmgr" />
+          <SSIS:ConnectionManager SSIS:Name="AdventureWorks2022.conmgr" />
+          <SSIS:ConnectionManager SSIS:Name="AdventureWorks2022_DWH.conmgr" />
         </SSIS:ConnectionManagers>
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.ConnectByProxy">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.ConnectByProxy">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -56,7 +56,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.ConnectRetryCount">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.ConnectRetryCount">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -71,7 +71,7 @@
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.ConnectRetryInterval">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.ConnectRetryInterval">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -86,7 +86,7 @@
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.ConnectUsingManagedIdentity">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.ConnectUsingManagedIdentity">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -101,7 +101,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.InitialCatalog">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.InitialCatalog">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -112,11 +112,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">AdventureWorks2022</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">YOUR_DB_NAME</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.Password">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.Password">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -130,7 +130,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.RetainSameConnection">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.RetainSameConnection">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -145,7 +145,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.ServerName">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.ServerName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -156,11 +156,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">ENES-DESKTOP</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">YOUR_SERVER_NAME</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022.UserName">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022.UserName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -174,7 +174,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.ConnectByProxy">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.ConnectByProxy">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -189,7 +189,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.ConnectRetryCount">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.ConnectRetryCount">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -204,7 +204,7 @@
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.ConnectRetryInterval">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.ConnectRetryInterval">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -219,7 +219,7 @@
                 <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.ConnectUsingManagedIdentity">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.ConnectUsingManagedIdentity">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -234,7 +234,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.InitialCatalog">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.InitialCatalog">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -245,11 +245,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">AdventureWorks2022_DWH</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">YOUR_DB_NAME</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.Password">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.Password">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -263,7 +263,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.RetainSameConnection">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.RetainSameConnection">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -278,7 +278,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.ServerName">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.ServerName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -289,11 +289,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">ENES-DESKTOP</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">YOUR_SERVER_NAME</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.ENES-DESKTOP.AdventureWorks2022_DWH.UserName">
+            <SSIS:Parameter SSIS:Name="CM.AdventureWorks2022_DWH.UserName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -349,10 +349,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">39</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{642FFEBE-0272-4D31-B539-8C5AD7273363}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{70993C8E-B688-47B5-9A1E-DD3A244E26CC}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

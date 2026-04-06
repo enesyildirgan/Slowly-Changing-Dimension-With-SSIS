@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{4276444C-A565-4582-AF4D-7F0200013A18}">
+  DTS:VersionBuild="61"
+  DTS:VersionGUID="{4443670B-AAC9-4E9A-8300-A48F1238D9ED}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -231,7 +231,7 @@ where [refTable].[ProductID] = ?</property>
                 <connection
                   refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -407,7 +407,7 @@ WHERE DwhProductID =?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -534,7 +534,7 @@ WHERE DwhProductID =?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -711,7 +711,7 @@ WHERE DwhProductID =?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -901,7 +901,7 @@ ModifiedDate  &gt;   ?</property>
                 <connection
                   refId="Package\Data Flow Task\OLTP vw_Dim_Product.Connections[OleDbConnection]"
                   connectionManagerID="{693132E0-79DC-42BC-AD5D-141CC0B623A9}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1405,7 +1405,7 @@ ModifiedDate  &gt;   ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1415,7 +1415,7 @@ ModifiedDate  &gt;   ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

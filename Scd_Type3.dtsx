@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{642FFEBE-0272-4D31-B539-8C5AD7273363}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{3A30826C-C561-4DCE-8AE2-F2890C10600D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -454,7 +454,7 @@ where [refTable].[ProductID] = ?</property>
                 <connection
                   refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -613,7 +613,7 @@ WHERE ProductID = ?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -907,7 +907,7 @@ WHERE ProductID = ?</property>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1072,7 +1072,7 @@ ModifiedDate  &gt;   ?</property>
                 <connection
                   refId="Package\Data Flow Task\OLTP vw_Dim_Product.Connections[OleDbConnection]"
                   connectionManagerID="{693132E0-79DC-42BC-AD5D-141CC0B623A9}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1504,7 +1504,7 @@ ModifiedDate  &gt;   ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1514,7 +1514,7 @@ ModifiedDate  &gt;   ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

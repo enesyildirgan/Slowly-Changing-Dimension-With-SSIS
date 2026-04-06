@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{914E7051-4073-468C-A030-860843477FEC}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{B33DC62F-CF0E-4E3F-8CEE-E0173E172CC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -103,7 +103,7 @@
                 <connection
                   refId="Package\Data Flow Task\Insert Destination.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -228,7 +228,7 @@
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -420,7 +420,7 @@ ModifiedDate &gt;?</property>
                 <connection
                   refId="Package\Data Flow Task\OLTP vw_Dim_Product.Connections[OleDbConnection]"
                   connectionManagerID="{693132E0-79DC-42BC-AD5D-141CC0B623A9}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -603,7 +603,7 @@ ModifiedDate &gt;?</property>
                 <connection
                   refId="Package\Data Flow Task\SCD TYPE 1.Connections[LookupConnection]"
                   connectionManagerID="{99BD5F10-5748-465A-870F-224FF6D5A855}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[ENES-DESKTOP.AdventureWorks2022_DWH]"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2022_DWH]"
                   description="Defines the connection to use for lookups in the dimension table"
                   name="LookupConnection" />
               </connections>
@@ -867,35 +867,17 @@ ModifiedDate &gt;?</property>
           Id="Package\Data Flow Task\OLTP vw_Dim_Product"
           TopLeft="218.5,5.5" />
         <NodeLayout
-          Size="135,42"
-          Id="Package\Data Flow Task\SCD TYPE 1"
-          TopLeft="244.5,107.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="312,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="163,42"
           Id="Package\Data Flow Task\Insert Destination"
           TopLeft="38.5000000000001,214.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="267,214.5" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Data Flow Task\SCD TYPE 1"
+          TopLeft="244.5,107.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[New Output]"
           TopLeft="290.833333333333,149.5">
@@ -932,10 +914,6 @@ ModifiedDate &gt;?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Data Flow Task\OLE DB Command"
-          TopLeft="267,214.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
           TopLeft="333.166666666667,149.5">
@@ -972,6 +950,28 @@ ModifiedDate &gt;?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="312,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -980,6 +980,19 @@ ModifiedDate &gt;?</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1041,19 +1054,6 @@ ModifiedDate &gt;?</property>
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

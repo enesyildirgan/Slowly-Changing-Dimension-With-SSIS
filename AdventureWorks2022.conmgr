@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:DelayValidation="True"
-  DTS:ObjectName="ENES-DESKTOP.AdventureWorks2022"
+  DTS:ObjectName="AdventureWorks2022"
   DTS:DTSID="{693132E0-79DC-42BC-AD5D-141CC0B623A9}"
   DTS:CreationName="OLEDB">
   <DTS:PropertyExpression
@@ -10,6 +10,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=ENES-DESKTOP;Initial Catalog=AdventureWorks2022;Provider=SQLOLEDB;Integrated Security=SSPI;" />
+      DTS:ConnectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=YOUR_DB_NAME;Provider=SQLOLEDB;Integrated Security=SSPI;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
