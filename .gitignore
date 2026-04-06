@@ -1,0 +1,5 @@
+*.user
+*.dtproj.user
+bin/
+obj/
+.vs/
